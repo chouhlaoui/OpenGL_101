@@ -24,7 +24,7 @@
     <ClCompile Include="Exercice1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\msys64\home\Chourouk\common\GLShader.cpp">
+    <ClCompile Include="GLShader.cpp">
       <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>

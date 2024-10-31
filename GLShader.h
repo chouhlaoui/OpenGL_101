@@ -1,31 +1,24 @@
 #pragma once
 
 #include <cstdint>
+#include <string>
+#include <fstream>
+#include <iostream>
 
-class GLShader
-{
+class GLShader {
 public:
-	// un programme fait le liens entre Vertex Shader et Fragment Shader
-	uint32_t m_Program;
-	// Un Vertex Shader est execute pour chaque sommet (vertex)
-	uint32_t m_VertexShader;
-	// Un Geometry Shader est execute pour chaque primitive
-	uint32_t m_GeometryShader;
-	// Un Fragment Shader est execute pour chaque "pixel"
-	// lors de la rasterization/remplissage de la primitive
-	uint32_t m_FragmentShader;
+    uint32_t m_Program;
 
-	GLShader() : m_Program(0), m_VertexShader(0),
-		m_GeometryShader(0), m_FragmentShader(0) {
+    GLShader();
+    ~GLShader();
 
-	}
-	~GLShader() {}
+    uint32_t GetProgram() const { return m_Program; }
 
-	inline uint32_t GetProgram() { return m_Program; }
+    bool LoadShaders(const char* vertexPath, const char* fragmentPath);
+    void Use() const;
+    void Destroy();
 
-	bool LoadVertexShader(const char* filename);
-	bool LoadGeometryShader(const char* filename);
-	bool LoadFragmentShader(const char* filename);
-	bool Create();
-	void Destroy();
+private:
+    bool CompileShader(const char* shaderCode, uint32_t shaderType, uint32_t& shaderID);
+    std::string ReadFile(const char* filePath);
 };

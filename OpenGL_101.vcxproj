@@ -104,14 +104,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Chourouk\Desktop\Learn\OpenGL_101\glm;C:\Users\Chourouk\Downloads\glew-2.1.0\include;C:\Users\Chourouk\Downloads\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalModuleDependencies>C:\Users\Chourouk\Desktop\Learn\OpenGL_101\glm</AdditionalModuleDependencies>
-      <AdditionalHeaderUnitDependencies>C:\Users\Chourouk\Desktop\Learn\OpenGL_101\glm</AdditionalHeaderUnitDependencies>
+      <AdditionalIncludeDirectories>.\libs\glew-2.1.0\include;.\libs\glfw-3.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalModuleDependencies>
+      </AdditionalModuleDependencies>
+      <AdditionalHeaderUnitDependencies>
+      </AdditionalHeaderUnitDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Chourouk\Desktop\Learn\OpenGL_101\glm;C:\Users\Chourouk\Downloads\glew-2.1.0\lib\Release\x64;C:\Users\Chourouk\Downloads\glfw-3.4.bin.WIN64\lib-vc2022;C:\Users\Chourouk\Downloads\glew-2.1.0\lib\Release\x64;C:\Users\Chourouk\Downloads\glfw-3.4.bin.WIN64\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\libs\glew-2.1.0\lib\Release\x64;.\libs\glfw-3.4\lib-vc2022;.\libs\glfw-3.4\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;user32.lib;gdi32.lib;shell32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -137,11 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\msys64\home\Chourouk\common\GLShader.cpp" />
     <ClCompile Include="Exercice1.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Chourouk\Downloads\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Chourouk\Downloads\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="GLShader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.fs" />
